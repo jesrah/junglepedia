@@ -22,10 +22,13 @@ $(function() {
 
     	$(".list-group").empty();
     	if (titles.length === 0) { 
-    		$(".list-group").append('<li class="list-group-item">' + 'No results. Try different keywords.' + '</li>');
+    		$(".list-group").append('<li class="list-group-item">' + 'No results. Try typing just one keyword.' + '</li>');
     		return;
     	}
   		for (let i = 0; i < limit; i++) {
+  			if (!urls[i]) {
+  				return;
+  			}
   			$(".list-group").append('<li class="list-group-item">' + '<h3>' + titles[i] + '</h3>' + '<br>' + snippets[i] + '<br>' + `<a href="${urls[i]}">` + urls[i] + '</a>' + '</li>')
   		}
   	})
