@@ -29,31 +29,27 @@
   	<!-- Page Header -->
     <header class="jumbotron text-center" style="background-image: url('images/jungle-hero-opt.jpg'); color: white;">
 		  <h1 class="display-4 lobster">Junglepedia</h1>
-		  <p>It's a jungle out there!</p> 
+		  <h5>It's a jungle out there!</h5> 
 		</header>
 
     <!-- Forms -->
     <section id="search">
     	<div class="container">
 				<form class="submit form-inline">
-				  <div class="form-group input-group row">
-				    <label for="query" class="col-form-label col">Search</label>
-				    <input type="text" class="form-control col" id="query" name="wiki-query">
-				    <span class="input-group-btn col">
+				  <div class="form-group input-group">
+				    <label for="query" class="col-form-label mb-2 mr-sm-2">Search</label>
+				    <input type="text" class="form-control mb-2 mr-sm-2" id="query" name="wiki-query">
+				    <span class="input-group-btn mb-2 mr-sm-2">
 				    	<button type="submit" class="btn btn-outline-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
 				  	</span>    
 				  </div>
 				</form>
-				<form class="select form-inline">
-					<div class="form-group row">
-						<label for="filter-select" class="col col-form-label">Sort</label>
-				    <select class="form-control col" id="filter-relevance">
-				      <option>Most Relevant</option>
-				      <option>Least Relevant</option>
-				    </select> 
-				  </div>
-				</form>
-	    </div>
+			</div>
+			<div class="container">
+				<p>Sort by relevance?</p>
+				<button class="btn btn-outline-dark mb-2 mr-sm-2" role="button">Sort</button>
+				<button class="btn btn-outline-dark mb-2 mr-sm-2" role="button">Reset</button>
+			</div>
     </section>
 
     <!-- Main Content -->
@@ -62,10 +58,6 @@
         <hr class="star-dark mb-5">
         <ul class="list-group list-unstyled list-group-flush"></ul>    	
       </div>
-      <div class="container">
-      	<hr class="star-dark mb-5">
-      </div>
-
     </section>
 
     <!-- Footer -->
