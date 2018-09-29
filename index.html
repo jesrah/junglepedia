@@ -5,10 +5,21 @@
 
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 
 	  <title>Junglepedia</title>
 
+	  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+
 	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two:700" rel="stylesheet">
 
 	  <link rel="stylesheet" href="css/styles.css">
 
@@ -16,34 +27,77 @@
   <body>
 
   	<!-- Page Header -->
-  	<header class="masthead" style="background-image: url('images/jungle-hero-opt.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Junglepedia</h1>
-              <span class="subheading">It's a jungle out there! Simplify your search.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header class="jumbotron text-center" style="background-image: url('images/jungle-hero-opt.jpg'); color: white;">
+		  <h1 class="display-4 lobster">Junglepedia</h1>
+		  <p>It's a jungle out there!</p> 
+		</header>
+
+    <!-- Forms -->
+    <section id="search">
+    	<div class="container">
+				<form class="submit form-inline">
+				  <div class="form-group input-group row">
+				    <label for="query" class="col-form-label col">Search</label>
+				    <input type="text" class="form-control col" id="query" name="wiki-query">
+				    <span class="input-group-btn col">
+				    	<button type="submit" class="btn btn-outline-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+				  	</span>    
+				  </div>
+				</form>
+				<form class="select form-inline">
+					<div class="form-group row">
+						<label for="filter-select" class="col col-form-label">Sort</label>
+				    <select class="form-control col" id="filter-relevance">
+				      <option>Most Relevant</option>
+				      <option>Least Relevant</option>
+				    </select> 
+				  </div>
+				</form>
+	    </div>
+    </section>
 
     <!-- Main Content -->
-     <div class="container">
-    		<form class="submit">
-    			<label for="query">Query:</label>
-    			<input type="text" id="query" name="wiki-query">
-    			<button type="submit">Submit</button>
-    		</form>
-  	</div>
-  	<div class="placeholder">
-  	</div>
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <script src="./index.js"></script>
+    <section id="wiki-list">
+      <div class="container">
+        <hr class="star-dark mb-5">
+        <ul class="list-group list-unstyled list-group-flush"></ul>    	
+      </div>
+      <div class="container">
+      	<hr class="star-dark mb-5">
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+				<ul class="list-inline">
+          <li class="list-inline-item">
+            <a class="btn btn-outline-dark btn-social text-center rounded-circle" href="http://github.com/jesrah" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn btn-outline-dark btn-social  rounded-circle" href="http://linkedin.com/in/jessicarahman" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn btn-outline-dark btn-social text-center rounded-circle" href="http://www.jessicarahman.com" target="_blank">
+              <i class="fa fa-paint-brush"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+	  <!-- Bootstrap core JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<!-- Custom JS -->
+    <script src="./index.js"></script>
   </body>
 </html>
