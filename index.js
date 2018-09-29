@@ -7,7 +7,6 @@ $(function() {
 		var limit = 10;
     $.ajax({
       method: "GET",
-      // url:`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${query}&utf8=&format=json&origin=*`,
       url:`https://en.wikipedia.org/w/api.php?action=opensearch&search=${query}&limit=${limit}&format=json&origin=*`,
       contentType: "application/json; charset=utf-8",
       dataType: "json",
@@ -15,7 +14,7 @@ $(function() {
     })
     .done((data) => {
     	formData = true;
-    	//if "least relevant" is selected, set variable to false, and reverse each data array. 
+
     	let titles = data[1];
     	let snippets = data[2];
     	let urls = data[3];
